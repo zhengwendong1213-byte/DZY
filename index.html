@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8" />
+    <title>Luxury Goods | 2026 LuxuryDefined</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    
+    <!-- 字体：参考 yehaixing 使用的高级感字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1385135640295106');
+    fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+
+    <style>
+        :root {
+            --bg-color: #F0EDE6; /* 经典的奢侈品站米褐色背景 */
+            --text-color: #3e3a35;
+            --accent-color: #718264; /* 墨绿色，参考 yehaixing 的按钮颜色 */
+            --gold: #C5A059;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Source Sans 3', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        h1, h2 { font-family: 'Playfair Display', serif; font-weight: 400; }
+
+        .site-wrapper {
+            max-width: 800px; /* 模拟 yehaixing 的居中窄版布局，更像手机APP */
+            margin: 0 auto;
+            background: #fff;
+            min-height: 100vh;
+            padding-bottom: 80px; /* 为吸底按钮留空间 */
+        }
+
+        /* 顶部装饰条 */
+        header {
+            padding: 40px 20px;
+            text-align: center;
+            background: #fff;
+        }
+        header h1 { font-size: 2.2rem; letter-spacing: 2px; }
+        header p { font-size: 0.9rem; color: var(--gold); text-transform: uppercase; margin-top: 10px; font-weight: 600; }
+
+        /* 图片区块样式 */
+        .section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+            margin-bottom: 2rem;
+        }
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .image-container img {
+            width: 100%;
+            display: block;
+        }
+
+        .text-content {
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .text-content h2 { font-size: 1.8rem; margin-bottom: 15px; color: var(--text-color); }
+        .text-content p { font-size: 1.1rem; color: #666; font-style: italic; }
+
+        /* 按钮样式 - 参考 yehaixing */
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--accent-color);
+            color: #fff;
+            text-decoration: none;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(113, 130, 100, 0.2);
+        }
+        .cta-btn:hover {
+            transform: scale(1.05);
+            background-color: #5d6d52;
+        }
+
+        /* 吸底固定联系栏 */
+        .sticky-footer {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 12px 20px;
+            border-radius: 100px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 9999;
+            border: 1px solid rgba(197, 160, 89, 0.3);
+        }
+        .sticky-footer span { font-family: 'Playfair Display', serif; font-weight: 700; color: var(--text-color); }
+        .wa-small-btn {
+            background-color: #25D366;
+            color: white;
+            padding: 8px 18px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .footer-note {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.8rem;
+            color: #999;
+            letter-spacing: 1px;
+        }
+
+        /* 动画关键帧 */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="site-wrapper">
+        <header>
+            <h1>PT STORE</h1>
+            <p>2026 Luxury Defined • Exclusive Selection</p>
+        </header>
+
+        <!-- 第1部分：Hero 展示 -->
+        <div class="section">
+            <div class="image-container">
+                <img src="1.jpg" alt="Luxury Brands Selection">
+            </div>
+            <div class="text-content">
+                <h2>There is nothing we don't have.</h2>
+                <p>"I am short-sighted, and you are all I see."</p>
+                <a href="https://wa.me/85246642813" class="cta-btn" onclick="fbq('track', 'Contact');">
+                    Contact via WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <!-- 第2部分：Chanel 内容 -->
+        <div class="section">
+            <div class="image-container">
+                <img src="2.jpg" alt="Love Yourself First">
+            </div>
+        </div>
+
+        <!-- 第3部分：生活态度 -->
+        <div class="section">
+            <div class="image-container">
+                <img src="3.jpg" alt="Unique Lifestyle">
+            </div>
+            <div class="text-content">
+                <h2>You are unique.</h2>
+                <p>Live your own life, don't live for what others see as right.</p>
+            </div>
+        </div>
+
+        <!-- 第4部分：秀场 -->
+        <div class="section">
+            <div class="image-container">
+                <img src="4.jpg" alt="Exclusive Selection">
+            </div>
+        </div>
+
+        <!-- 第5部分：珠宝 -->
+        <div class="section">
+            <div class="image-container">
+                <img src="5.jpg" alt="Jewelry Collection">
+            </div>
+            <div class="text-content">
+                <h2>Your Moment, Your Jewelry.</h2>
+                <a href="https://wa.me/85246642813" class="cta-btn" onclick="fbq('track', 'Contact');">
+                    Explore Jewelry
+                </a>
+            </div>
+        </div>
+
+        <!-- 第6-7部分：合集与鞋履 -->
+        <div class="section">
+            <div class="image-container">
+                <img src="6.jpg" alt="Luxury Accessories">
+            </div>
+        </div>
+        <div class="section">
+            <div class="image-container">
+                <img src="7.jpg" alt="New Arrivals">
+            </div>
+        </div>
+
+        <!-- 第8部分：页脚品牌墙 -->
+        <div class="section">
+            <div class="image-container">
+                <img src="8.jpg" alt="Brand Logos Footer">
+            </div>
+        </div>
+
+        <div class="footer-note">
+            © PT STORE. DEDICATED TO LUXURY FOR 10 YEARS.
+        </div>
+    </div>
+
+    <!-- 吸底联系工具栏 -->
+    <div class="sticky-footer">
+        <span>PT LUXURY 2026</span>
+        <a href="https://wa.me/85246642813" class="wa-small-btn" onclick="fbq('track', 'Contact');">
+            Inquiry Now
+        </a>
+    </div>
+
+    <!-- 滚动显示脚本 -->
+    <script>
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+</body>
+</html>
